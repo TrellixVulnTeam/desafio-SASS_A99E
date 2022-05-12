@@ -1,0 +1,41 @@
+@import '../base/variables';
+
+
+header{
+    display: flex;
+    flex-direction: column;
+    div{
+        background-color: $colorPrimario;
+        width: 100%;
+        padding: 0, 0, 0, 0;
+        img{
+            width: 15%;
+            height: auto;
+        }
+    }
+    nav{
+        background-color: $colorSecundario;
+        grid-area: nav;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        ul{
+            li{
+                font-family: $fuenteGeneral;
+                display: inline-block;
+                padding-right: 4rem;
+                font-size: x-large;
+                transition-duration: 0.5s;
+                a{
+                    text-decoration: none;
+                    color: beige
+                }
+            }
+            li:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+}
