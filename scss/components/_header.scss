@@ -1,36 +1,36 @@
 @import '../base/variables';
-
-
+@import'../base/mapas';
+@import'../base/extends';
+@import'../base/mixin';
 header{
-    display: flex;
+    @extend %flex;
     flex-direction: column;
     div{
-        background-color: $colorPrimario;
+        background-color: map-get($header , logoColor);
         width: 100%;
         padding: 0, 0, 0, 0;
         img{
-            width: 15%;
-            height: auto;
+            @include dimensiones (15%, auto)
         }
     }
     nav{
-        background-color: $colorSecundario;
+        background-color: map-get($header , fondoColor);
         grid-area: nav;
-        display: flex;
+        @extend %flex;
         flex-direction: row;
         justify-content: flex-end;
         padding-top: 1%;
         padding-bottom: 1%;
         ul{
             li{
-                font-family: $fuenteGeneral;
+                font-family:map-get($header , fuenteTexto);
                 display: inline-block;
                 padding-right: 4rem;
                 font-size: x-large;
                 transition-duration: 0.5s;
                 a{
                     text-decoration: none;
-                    color: beige
+                    color: map-get($header , textoColor)
                 }
             }
             li:hover{
